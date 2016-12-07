@@ -1,0 +1,7 @@
+zone "wtg.co.uk" {
+        type master;
+        file "/var/named/data/publiczones/wtg.co.uk";
+        check-names fail;
+        allow-update { none; };
+        allow-query { any; };
+};

@@ -1,0 +1,19 @@
+view "internal" {
+   recursion                       yes;
+   allow-query                     { none; };
+   allow-notify                    { none; };
+   allow-query-cache               { wtg; };
+   allow-recursion                 { wtg; };
+   match-clients                   { wtg; };
+   include                         "/var/named/chroot/etc/named/root.hints";
+   include                         "/var/named/chroot/etc/named/internal.zones";
+};
+
+view "public" {
+   recursion                       no;
+   match-clients                   { any; };
+   allow-query                     { any; };
+   allow-query-cache               { none; };
+   include                         "/var/named/chroot/etc/named/root.hints";
+   include                         "/var/named/chroot/etc/named/public.zones";
+};

@@ -1,0 +1,15 @@
+/*
+ ---------------------------------------------------------
+ -
+ - File:         root.hints
+ - Version:      v0.0.3
+ - Purpose:      Include file for root hints zone
+ - Author:       Ray Edah <ray.edah@wtg.co.uk>
+ - Copyright:    (c) Web Technology Group Ltd 2013, 2014
+ -
+ ---------------------------------------------------------
+ */
+zone "." IN {
+   type hint;
+   file "/var/named/data/root_hints.db";
+};
